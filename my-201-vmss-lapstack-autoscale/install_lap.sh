@@ -12,6 +12,7 @@ done
 # write some PHP; these scripts are downloaded beforehand as fileUris
 cp index.php /var/www/html/
 cp do_work.php /var/www/html/
+touch /var/www/html/`date "+%Y.%m.%d-%H.%M.%S"`.log
 rm /var/www/html/index.html
 # restart Apache
 apachectl restart

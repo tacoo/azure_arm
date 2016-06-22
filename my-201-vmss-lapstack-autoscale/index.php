@@ -12,5 +12,19 @@
 	  <input type="submit" value="Do work">
 	</form>
 	</ul></ul></ul>
+<?php
+$dir = opendir('.');
+while(false != ($file = readdir($dir))) {
+   if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+       $files[] = $file; // put in array.
+   }
+}
+natsort($files); // sort.
+
+// print.
+foreach($files as $file) {
+    echo("<a href='$file'>$file</a> <br />\n");
+}
+?>
   </body>
 </html>
