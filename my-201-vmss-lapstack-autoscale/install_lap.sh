@@ -12,7 +12,7 @@ done
 # write some PHP; these scripts are downloaded beforehand as fileUris
 cp index.php /var/www/html/
 cp do_work.php /var/www/html/
-echo `date "+%Y.%m.%d-%H.%M.%S"`>/var/www/html/deploy.log
+echo `date "+%Y.%m.%d-%H.%M.%S"`>/var/www/html/deploy.html
 rm /var/www/html/index.html
 # restart Apache
 apachectl restart
